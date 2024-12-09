@@ -16,7 +16,7 @@ app.get("/api/get_user_details", (req, res) => {
     env: process.env.NAME,
   });
 });
-const PORT = process.env.PORT || 5001;
+const PORT = process.env.PORT || 8000;
 console.log("PORT:", process.env.PORT);
 app.listen(process.env.PORT, () => {
   console.log(`listening to ${PORT}`);
