@@ -107,7 +107,7 @@ Inside the Nginx configuration file, add the following block to configure the re
 ```
 location /api {
 rewrite ^\/api\/(.\*)$ /api/$1 break;
-proxy_pass http://localhost:8000;
+proxy_pass http://localhost:8001;
 proxy_set_header Host $host;
 proxy_set_header X-Real-IP $remote_addr;
 proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
@@ -133,10 +133,9 @@ Step 8: Restart Your Node.js Application with PM2 (Optional)
 If you need to restart your Node.js application managed by PM2, you can use the following command:
 
 ```
-pm2 restart Backend
+pm2 restart awsserver
 ```
 
-## API
 
 ### API Endpoints
 
