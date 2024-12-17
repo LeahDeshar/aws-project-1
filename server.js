@@ -8,20 +8,24 @@ connectDB();
 
 app.use("/api/users", userRoutes);
 app.get("/api/get", (req, res) => {
-  res.send({ message: "Welcome" });
-});
-
-app.get("/api/get_user_details", (req, res) => {
   res.send({
-    user: {
-      name: "John Doe",
-      age: 22,
-      contact: 12254,
-    },
-    env: process.env.NAME,
+    message: "Scuccessful depployment of AWS Nodejs backend services project",
   });
 });
-const PORT = process.env.PORT || 8001;
+
+app.get("/api/get_product_details", (req, res) => {
+  res.send({
+    product: {
+      id: 101,
+      name: "Laptop",
+      price: 1500,
+      inStock: true,
+    },
+    author: process.env.NAME,
+    timestamp: new Date().toISOString(),
+  });
+});
+const PORT = process.env.PORT;
 console.log(process.env.PORT);
 console.log("PORT:", PORT);
 app.listen(PORT, () => {

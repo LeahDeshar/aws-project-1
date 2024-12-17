@@ -7,9 +7,9 @@ router.get("/create", async (req, res) => {
   try {
     // fake data to store
     const data = new User({
-      username: "Person 2",
-      email: "person2@gmail.com",
-      password: "person2password",
+      username: "Person 3",
+      email: "person3@gmail.com",
+      password: "person3password",
     });
 
     const user = new User(data);
