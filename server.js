@@ -3,10 +3,9 @@ const app = express();
 const userRoutes = require("./user.routes");
 const connectDB = require("./connection");
 require("dotenv").config();
+
 connectDB();
-app.get("/api/update", (req, res) => {
-  res.send({ message: "Update the code.." });
-});
+
 app.use("/api/users", userRoutes);
 app.get("/api/get", (req, res) => {
   res.send({ message: "Welcome" });
